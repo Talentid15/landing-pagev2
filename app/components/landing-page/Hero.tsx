@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import product from '@/app/assets/product-image.png';
+import product from '@/app/assets/heroimage.png';
 import Image from 'next/image';
 
 const ProductShowCase = () => {
@@ -11,15 +11,14 @@ const ProductShowCase = () => {
         <div className="max-w-[900px] mx-auto">
           <div className="flex justify-center items-center">
             <div className="tag inline-block px-3 py-1 text-purple-800 rounded-full text-sm font-semibold">
-              Get Started with Staar AI
+              No more getting ghosted in hiring
             </div>
           </div>
           <h2 className='my-5 section-title text-4xl md:text-5xl font-bold text-center text-gray-900'>
-            Install and Run Your Workflow Companion
+          Recruit Smarter.  Close Faster.  Ghost-Proof Your Offers.
           </h2>
           <p className='section-description text-lg text-center text-gray-600'>
-            Download Staar AI as a zip file, unzip it, and run it on your desktop to start working smarter—code, files, and more, all in your flow.
-          </p>
+          Don’t wait for candidates to disappear. Talentid helps you gauge intent, identify risks, and optimize your close strategy, all before the candidate joins.          </p>
         </div>
         <div className="relative mt-10 max-w-[2000px] mx-auto">
           <div className="relative rounded-lg shadow-xl overflow-hidden">
