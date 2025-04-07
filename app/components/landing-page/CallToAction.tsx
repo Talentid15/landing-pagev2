@@ -1,8 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Arrow from '@/app/assets/arrow-right.svg';
+import TryForFreePopup from '../common/Try';
+import Link from 'next/link';
 
 const CallToAction = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <section
       className="bg-gradient-to-b from-white to-[_#e9d5ff] py-24 overflow-x-clip"
@@ -20,18 +24,22 @@ const CallToAction = () => {
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary" aria-label="Download Staar AI for free">
-            Download Now
-          </button>
-          <button
-            className="btn btn-text flex gap-2 items-center"
-            aria-label="Learn more about Staar AI features"
-          >
-            <span>Discover Features</span>
-            <Arrow className="w-5 h-5" />
+          <Link href={"https://tally.so/r/3EBzql"} target='_blank' className='btn btn-primary'>Book a demo</Link>
+          <button className='btn btn-text gap-1'>
+            <span
+              onClick={() => setIsPopupOpen(true)}
+              className="px-1 py-2  rounded-lg hover:scale-105 transition-all duration-200"
+            >
+              Try for free
+            </span>
+            <Arrow className="h-5 w-5" />
           </button>
         </div>
       </div>
+      <TryForFreePopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </section>
   );
 };

@@ -38,7 +38,7 @@ html{
     }
 
     .section-title{
-        @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[_#652d96] text-transparent bg-clip-text
+        @apply text-center text-3xl md:text-[40px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[_#652d96] text-transparent bg-clip-text
     }
 
     .section-description{

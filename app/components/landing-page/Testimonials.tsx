@@ -56,7 +56,7 @@ const Testimonials = () => {
   const thirdColumn = testimonials.slice(6, 9);
 
   return (
-    <section className='bg-white py-0'>
+    <section className='bg-white py-24'>
       <div className="px-5">
         <div className="mx-auto max-w-[540px]">
           <div className="flex justify-center">

@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
-import { DM_Sans } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: "Staar AI",
-  description: "Staar AI is your desktop companion that works with your flow—enhancing productivity across code, files, and tasks with a free, downloadable app.",
-  keywords: "desktop AI, workflow assistant, productivity tool, free AI download, code helper, file management, AI companion",
+  title: "Talentid | Smart Hiring, Simplified",
+  description: "Talentid helps you hire smarter, faster, and better. Instantly send offers, track hiring in real-time, predict joining with AI, and enable transparent candidate feedback—all in one seamless platform.",
+  keywords: "Talentid, hiring platform, smart recruitment, offer tracking, joining prediction, AI hiring tool, recruitment automation, candidate feedback",
 };
 
-const dmSans = DM_Sans({ subsets: ['latin'] });
+const dmSans = Poppins({
+  subsets: ['latin'],
+  weight: ['100','200','300','400','500','600','700','800','900']
+});
 
 export default function RootLayout({
   children,
@@ -18,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body
-        className={clsx(dmSans.className, 'antialiased bg-[#e9d5ff]')}
-      >
+      <body className={clsx(dmSans.className, 'antialiased bg-[#e9d5ff]')}>
         {children}
       </body>
     </html>

@@ -5,6 +5,7 @@ import ProductShowCase from "./ProductShowCase";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
 import GridCard from "./Grid";
+import MainPage from "./Mainpage";
 
 export {
     CallToAction,
@@ -13,5 +14,6 @@ export {
     ProductShowCase,
     Testimonials,
     Pricing,
-    GridCard
+    GridCard,
+    MainPage
 }
