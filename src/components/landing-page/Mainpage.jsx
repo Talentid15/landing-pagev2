@@ -32,7 +32,7 @@ const HeroComponent = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 px-6 border py-20 flex items-center justify-center">
+    <section className="min-h-screen md:mt-10 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 px-6 border py-20 flex items-center justify-center">
       <div className="w-11/12 mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <div className="">
