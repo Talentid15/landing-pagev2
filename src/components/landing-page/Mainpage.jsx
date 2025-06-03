@@ -32,7 +32,7 @@ const HeroComponent = () => {
   ];
 
   return (
-    <section className="min-h-screen md:mt-10 bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 px-6 border py-20 flex items-center justify-center">
+    <section className="min-h-screen bg-gradient-to-br from-green-50 via-purple-50 to-blue-50 px-6 border py-20 flex items-center justify-center">
       <div className="w-11/12 mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <div className="">
@@ -52,7 +52,7 @@ const HeroComponent = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#3affa0] text-black px-8 py-4 rounded-full font-semibold text-md  transition-all duration-200 transform">
+            <button className="bg-[#22f790] text-black px-8 py-4 rounded-full font-semibold text-md  transition-all duration-200 transform">
               Book a Demo
             </button>
             <button className="border-2 border-[#652d96] text-[#652d96] px-8 py-4 rounded-full font-semibold text-lg  transition-all duration-200">

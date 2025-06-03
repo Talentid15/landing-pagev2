@@ -23,7 +23,7 @@ export default function PricingPlans() {
             <div className="mb-8">
               <h3 className="text-[#3affa0] text-lg font-semibold mb-4">Starter</h3>
               <div className="mb-2">
-                <span className="text-4xl font-bold">$299</span>
+                <span className="text-4xl font-bold">₹799</span>
                 <span className="text-gray-300 text-lg">/month</span>
               </div>
               <p className="text-gray-300 text-sm">
@@ -42,7 +42,7 @@ export default function PricingPlans() {
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-sm">Ghosting Alerts</span>
+                <span className="text-sm">30 Candidate Ghosting Alerts</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,6 +56,12 @@ export default function PricingPlans() {
                 </svg>
                 <span className="text-sm">Email Support</span>
               </div>
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm">Unlimited Offer Punch</span>
+              </div>
             </div>
 
             <button className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-colors duration-200">
@@ -64,16 +70,16 @@ export default function PricingPlans() {
           </div>
 
           <div className="bg-[#652d96] rounded-2xl p-8 text-white relative transform scale-105">
-           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
               <span className="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-medium">
                 MOST POPULAR
               </span>
             </div>
 
             <div className="mb-8">
-              <h3 className="text-[#3affa0] text-lg font-semibold mb-4">Pro</h3>
+              <h3 className="text-[#3affa0] text-lg font-semibold mb-4">Growth</h3>
               <div className="mb-2">
-                <span className="text-4xl font-bold">$699</span>
+                <span className="text-4xl font-bold">₹2499</span>
                 <span className="text-purple-200 text-lg">/month</span>
               </div>
               <p className="text-purple-200 text-sm">
@@ -92,7 +98,7 @@ export default function PricingPlans() {
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-sm">Advanced Predictive AI</span>
+                <span className="text-sm">200 Candidate Ghosting Alerts</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +116,7 @@ export default function PricingPlans() {
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-sm">API Access</span>
+                <span className="text-sm">Unlimited Offer Punch</span>
               </div>
             </div>
 
@@ -142,7 +148,7 @@ export default function PricingPlans() {
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-sm">Custom AI Models</span>
+                <span className="text-sm">Unlimited Candidate Ghosting Alerts</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,6 +168,12 @@ export default function PricingPlans() {
                 </svg>
                 <span className="text-sm">SLA & Premium Support</span>
               </div>
+              <div className="flex items-center gap-3">
+                <svg className="w-5 h-5 text-[#3affa0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm">Unlimited Offer Punch</span>
+              </div>
             </div>
 
             <button className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-colors duration-200">
@@ -170,8 +182,7 @@ export default function PricingPlans() {
           </div>
         </div>
 
-        {/* Bottom Text */}
-        <div className="text-center mt-12">
+       <div className="text-center mt-12">
           <p className="text-gray-600 text-sm">
             All plans include a 14-day free trial. No credit card required.
           </p>

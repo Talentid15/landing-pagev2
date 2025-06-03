@@ -59,7 +59,7 @@ html {
     }
 
     .animate-custom-bounce {
-        animation: bounce 8s infinite;
+        animation: bounce 6s infinite;
     }
 
     @keyframes bounce {
