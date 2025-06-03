@@ -1,161 +1,134 @@
-import React from "react";
-import { BentoGrid, BentoGridItem } from "../../../components/magicui/bento";
-import {
-  IconClipboardCopy,
-  IconMapPin,
-  IconRobot,
-  IconArrowsExchange,
-} from "@tabler/icons-react";
-import { cn } from "../../../lib/utils";
-import { Marquee } from "../../../components/magicui/marquee";
-import AnimatedListDemo from "../../../components/ui/list";
-import AnimatedBeamDemo from "../../../components/ui/beam";
+import React from 'react';
 
-function GridCard() {
+const ProcessStep = ({ stepNumber, title, description, children, stepColor }) => {
   return (
-    <div className="relative min-h-screen dark:bg-gray-900">
-      {/* Header Section */}
-      <div className="text-center max-w-3xl mx-auto pt-12 pb-16 px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-          Hire Smarter, Faster, Better
-        </h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-          Talentid.app empowers you with instant offer delivery, real-time
-          tracking, AI-driven insights, and transparent feedback—all in one
-          seamless platform.
-        </p>
+    <div className="relative">
+      <div className={`absolute -top-4 left-6 w-8 h-8 ${stepColor} rounded-full flex items-center justify-center text-white font-bold text-sm z-10`}>
+        {stepNumber}
       </div>
 
-      {/* Grid Section */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4">
-        <BentoGrid className="grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              className={cn(
-                "relative overflow-hidden rounded-xl shadow-lg",
-                item.className
-              )}
-              icon={item.icon}
-            />
-          ))}
-        </BentoGrid>
+      <div className={`bg-white rounded-2xl ${Number(stepNumber) === 2 ? 'p-[3.0rem]' : 'p-8'} shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 pt-12`}>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+        <p className="text-gray-600 text-sm leading-relaxed mb-6">{description}</p>
+        {children}
       </div>
     </div>
   );
-}
+};
 
-// Skeleton Components
-const Skeleton1 = () => (
-  <div className="relative w-full h-40 overflow-hidden">
-    <Marquee
-      pauseOnHover
-      className="absolute inset-0 [--duration:20s] [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)]"
-    >
-      <figure
-        className={cn(
-          "relative w-64 cursor-pointer overflow-hidden rounded-lg border p-4 m-2",
-          "border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800",
-          "hover:bg-gray-50 dark:hover:bg-gray-700",
-          "transform-gpu transition-all duration-300 ease-out"
-        )}
-      >
-        <div className="flex items-center gap-2">
-          <figcaption className="text-sm font-medium text-gray-900 dark:text-white">
-            Offer Release
-          </figcaption>
+const PlatformTag = ({ children }) => {
+  return (
+    <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">
+      {children}
+    </span>
+  );
+};
+
+const FeatureItem = ({ children }) => {
+  return (
+    <div className="flex items-center space-x-2 mb-2">
+      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+      <span className="text-gray-700 text-sm">{children}</span>
+    </div>
+  );
+};
+
+const ProgressBar = ({ label, percentage }) => {
+  return (
+    <div className="mb-4 bg-gray-50 p-3 rounded-xl">
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-gray-700 text-sm font-medium">{label}</span>
+        <span className="text-[#652d96] font-bold text-sm">{percentage}%</span>
+      </div>
+      <div className="w-full bg-gray-200 rounded-full h-2">
+        <div
+          className="bg-gradient-to-r from-purple-500 to-[#652d96] h-2 rounded-full transition-all duration-500"
+          style={{ width: `${percentage}%` }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+const HowTalentIdWorks = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="mb-10">
+            <span className="bg-[#d7ffec] text-[#652d96] font-normal px-3 py-1 rounded-full text-sm">
+            Simple Process
+          </span>
+          </div>
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            How TalentId <span className="text-[#652d96]">Works</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Our platform integrates seamlessly with your existing workflow to provide predictive insights and boost candidate conversion.
+          </p>
         </div>
-        <blockquote className="mt-2 text-xs text-gray-600 dark:text-gray-300">
-          Send offers instantly with no delays. Create and roll out offer
-          letters in just a few clicks.
-        </blockquote>
-      </figure>
-    </Marquee>
-  </div>
-);
 
-const Skeleton2 = () => (
-  <div className="relative w-full h-40 overflow-hidden">
-    <AnimatedListDemo
-      className="absolute inset-0 h-full w-full scale-90 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-95"
-    />
-  </div>
-);
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <ProcessStep
+            stepNumber="1"
+            stepColor="bg-[#38ff9f]"
+            title="Connect Your ATS"
+            description="Integrate with your existing Applicant Tracking System in minutes. We support all major platforms."
+          >
+            <div className="space-y-2">
+              <PlatformTag>Greenhouse</PlatformTag>
+              <PlatformTag>Lever</PlatformTag>
+              <PlatformTag>Workday</PlatformTag>
+              <PlatformTag>+30 more</PlatformTag>
+            </div>
+          </ProcessStep>
 
-const Skeleton3 = () => (
-  <div className="relative w-full h-40 overflow-hidden dark:bg-gray-800 rounded-t-xl">
-    <svg
-      viewBox="0 0 300 100"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full"
-      preserveAspectRatio="none"
-    >
-      <polyline
-        fill="none"
-        stroke="#652d96"
-        strokeWidth="3"
-        strokeLinejoin="round"
-        strokeLinecap="round"
-        points="0,80 40,60 80,40 120,50 160,30 200,45 240,20 280,25 300,15"
-      >
-        <animate
-          attributeName="points"
-          dur="2s"
-          repeatCount="indefinite"
-          values="
-            0,80 40,60 80,40 120,50 160,30 200,45 240,20 280,25 300,15;
-            0,75 40,55 80,42 120,48 160,33 200,43 240,25 280,20 300,18;
-            0,80 40,60 80,40 120,50 160,30 200,45 240,20 280,25 300,15
-          "
-        />
-      </polyline>
-    </svg>
-  </div>
-);
+          <ProcessStep
+            stepNumber="2"
+            stepColor="bg-[#38ff9f]"
+            title="Send Smart Offers"
+            description="Create and send personalized offer letters through our platform. Track opens, views, and engagement in real-time."
+          >
+            <div className="space-y-2">
+              <FeatureItem>Instant delivery</FeatureItem>
+              <FeatureItem>Real-time tracking</FeatureItem>
+            </div>
+          </ProcessStep>
 
-const Skeleton4 = () => (
-  //  <AnimatedBeamDemo/>
-  <div className="">
-    <img src="https://res.cloudinary.com/dxfujspwu/image/upload/v1744030263/ppp_ixy0ct.png" alt="img" className="w-full"/>
-  </div>
-);
+          <ProcessStep
+            stepNumber="3"
+            stepColor="bg-[#38ff9f]"
+            title="Get Predictive Insights"
+            description="Our AI analyzes candidate behavior and provides joining probability scores and ghosting alerts."
+          >
+            <div className="mt-4">
+              <ProgressBar label="Joining Probability" percentage={87} />
+            </div>
+          </ProcessStep>
+        </div>
 
-const items = [
-  {
-    title: "Offer Release",
-    description:
-      "Send offers instantly. No delays. Create and roll out offer letters in just a few clicks. Streamlined, fast, and fully automated.",
-    header: <Skeleton1 />,
-    className: "col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Offer Tracking",
-    description:
-      "Track every offer in real time. Monitor status updates from 'Sent' to 'Signed' to 'Joined' — all in one place.",
-    header: <Skeleton2 />,
-    className: "col-span-1",
-    icon: <IconMapPin className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Joining Prediction",
-    description:
-      "AI-powered joining probability. We crunch behavioral and historical data to predict candidate acceptance.",
-    header: <Skeleton3 />,
-    className: "md:col-span-2",
-    icon: <IconRobot className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Two-Way Reviews",
-    description:
-      "Enable feedback from both recruiter and candidate. Improve your process and build trust.",
-    header: <Skeleton4 />,
-    className: "md:col-span-2",
-    icon: <IconArrowsExchange className="h-4 w-4 text-neutral-500" />,
-  },
-];
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#38ff9f] rounded-full flex items-center justify-center text-white z-10">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
 
-export default GridCard;
+            <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100 text-center pt-16">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Close More Candidates</h3>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+                Use our insights to take proactive action, engage at-risk candidates, and dramatically increase your offer acceptance rates.
+              </p>
+              <button className="bg-[#38ff9f] text-black/90 px-6 py-2 rounded-full font-semibold text-sm  transition-colors">
+                See It In Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HowTalentIdWorks;

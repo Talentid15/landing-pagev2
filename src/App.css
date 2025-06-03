@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,13 +12,14 @@
 
 }
 
-:where(body,html)::-webkit-scrollbar{
+:where(body, html)::-webkit-scrollbar {
     width: 0px
 }
 
-html{
+html {
     scroll-behavior: smooth
 }
+
 
 @layer utilities {
     .btn {
@@ -34,29 +34,46 @@ html{
         @apply text-black bg-transparent
     }
 
-    .logo-ticker-Image{
+    .logo-ticker-Image {
         @apply h-8 w-auto;
     }
 
-    .tag{
-        @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+    .tag {
+        @apply bg-[#d7ffec] text-[#652d96] font-normal px-3 py-1;
     }
 
-    .section-title{
+    .section-title {
         @apply text-center text-3xl md:text-[40px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[_#652d96] text-transparent bg-clip-text
     }
 
-    .section-description{
+    .section-description {
         @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
     }
 
-    .card{
+    .card {
         @apply p-10 border border-solid border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
     }
 
-    .borders{
+    .borders {
         @apply border border-red-500
     }
+    .animate-custom-bounce{
+        animation: bounce 10s infinite;
+    }
+    
+@keyframes bounce {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
 }
 
 .btn-color {
@@ -65,7 +82,7 @@ html{
 }
 
 @layer base {
-  :root {
+    :root {
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
         --card: 0 0% 100%;
@@ -92,7 +109,8 @@ html{
         --chart-5: 27 87% 67%;
         --radius: 0.5rem
     }
-  .dark {
+
+    .dark {
         --background: 0 0% 3.9%;
         --foreground: 0 0% 98%;
         --card: 0 0% 3.9%;

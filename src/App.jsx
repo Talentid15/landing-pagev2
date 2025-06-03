@@ -4,21 +4,23 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Hero, MainPage, LogoTicker, CallToAction, Testimonials,GridCard } from './components/landing-page/index'
 import Header from './components/common/header';
 import Footer from './components/common/footer';
-import TrustSection from './components/landing-page/LogoTicker';
 import Features from './components/landing-page/features';
+import StatsSection from './components/landing-page/StatsCard';
+import TalentIdForm from './components/landing-page/Form';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={
-          <main className='bg-[#e9d5ff]'>
+          <main className='bg-[#edf2f7] overflow-hidden'>
             <Header />
             <MainPage />
-            <LogoTicker />
-            <TrustSection />
+            <LogoTicker/>
+            <StatsSection/>
             <Features/>
             <GridCard />
+            <TalentIdForm/>
             <Testimonials />
             <CallToAction />
             <Footer />
