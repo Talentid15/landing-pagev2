@@ -8,10 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="md:col-span-1">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold">
-                <span className="text-white">talentid</span>
-                <span className="text-purple-500">.app</span>
-              </h2>
+              <img src="https://res.cloudinary.com/dfz0wkqij/image/upload/v1743994509/Group_17_hwtopf.png" alt="" className='h-6 w-auto' />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md">
               AI-powered candidate conversion platform that eliminates ghosting and predicts who will join.

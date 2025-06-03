@@ -52,7 +52,7 @@ const ProgressBar = ({ label, percentage }) => {
 
 const HowTalentIdWorks = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
+    <div className="min-h-screen bg-[#edf2f7] py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="mb-10">
@@ -61,7 +61,7 @@ const HowTalentIdWorks = () => {
           </span>
           </div>
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            How TalentId <span className="text-[#652d96]">Works</span>
+            How TalentId.app <span className="text-[#652d96]">Works</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our platform integrates seamlessly with your existing workflow to provide predictive insights and boost candidate conversion.

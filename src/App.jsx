@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { MainPage, LogoTicker, GridCard, StatsSection, Features, TalentIdForm } from './components/landing-page/index'
+import { MainPage, LogoTicker, GridCard,PricingPlans, StatsSection, Features, TalentIdForm } from './components/landing-page/index'
 import { Header, Footer } from './components/common/index';
 
 const App = () => {
@@ -15,6 +15,7 @@ const App = () => {
             <StatsSection />
             <Features />
             <GridCard />
+            <PricingPlans/>
             <TalentIdForm />
             <Footer />
           </main>

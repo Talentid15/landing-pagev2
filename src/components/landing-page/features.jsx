@@ -117,8 +117,8 @@ const Features = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <section className="bg-white py-20 relative overflow-hidden">
+    <div className="min-h-screen" >
+      <section className="bg-white py-20 relative overflow-hidden" id='features'>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="bg-[#d7ffec] text-[#652d96] font-normal px-3 py-1 rounded-full text-sm">Key Features</span>

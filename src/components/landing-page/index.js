@@ -5,6 +5,7 @@ import MainPage from "./Mainpage";
 import TalentIdForm from "./Form";
 import StatsSection from "./StatsCard";
 import Features from "./features";
+import PricingPlans from "./Pricing";
 
 export {
     LogoTicker,
@@ -13,5 +14,6 @@ export {
     MainPage,
     TalentIdForm,
     StatsSection,
-    Features
+    Features,
+    PricingPlans
 }
